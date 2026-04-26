@@ -1,1 +1,29 @@
-<p>navbar works!</p>
+<nav class="menu">
+
+  <!-- Lista de links de navegação -->
+  <ul class="menu__lista">
+
+    <!-- Link para a página inicial com o feed de posts -->
+    <li class="menu__item">
+      <a class="menu__link" routerLink="/" routerLinkActive="menu__link--ativo" [routerLinkActiveOptions]="{ exact: true }">
+        Início
+      </a>
+    </li>
+
+    <!-- Link para a página com história, missão, visão e valores -->
+    <li class="menu__item">
+      <a class="menu__link" routerLink="/sobre" routerLinkActive="menu__link--ativo">
+        Sobre
+      </a>
+    </li>
+
+    <!-- Link para a página de projetos sociais da empresa -->
+    <li class="menu__item">
+      <a class="menu__link" routerLink="/projetos" routerLinkActive="menu__link--ativo">
+        Projetos Sociais
+      </a>
+    </li>
+
+  </ul>
+
+</nav>

@@ -1,0 +1,64 @@
+/* ===================================================
+   Petro Energy — navbar.component.css
+   =================================================== */
+
+/* Container principal do menu de navegação */
+.menu {
+  background-color: #0f172a; /* tom mais escuro que o header para diferenciar as áreas */
+  padding: 0 64px;
+  border-bottom: 2px solid #f59e0b; /* linha dourada embaixo para destacar o menu */
+}
+
+/* Lista que agrupa todos os itens do menu lado a lado */
+.menu__lista {
+  list-style: none; /* remove os marcadores padrão da lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* coloca os itens em linha horizontal */
+  gap: 4px; /* espaço pequeno entre os itens */
+}
+
+/* Cada item individual do menu */
+.menu__item {
+  display: flex;
+}
+
+/* Link de navegação — aparência padrão */
+.menu__link {
+  display: block;
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #9ca3af; /* cinza claro quando não está ativo */
+  text-decoration: none; /* remove o sublinhado padrão dos links */
+  border-bottom: 3px solid transparent; /* borda invisível que aparece ao ativar */
+  transition: color 0.2s ease, border-color 0.2s ease; /* animação suave ao passar o mouse */
+}
+
+/* Link ao passar o mouse por cima */
+.menu__link:hover {
+  color: #f9fafb; /* fica mais claro ao passar o mouse */
+  border-bottom-color: #f59e0b; /* borda dourada aparece embaixo do link */
+}
+
+/* Link da página atual (aplicado automaticamente pelo Angular via routerLinkActive) */
+.menu__link--ativo {
+  color: #f9fafb; /* texto branco na página ativa */
+  border-bottom-color: #f59e0b; /* borda dourada permanente na página ativa */
+}
+
+/* --- Responsividade: ajustes para telas menores que 768px (celular) --- */
+@media (max-width: 768px) {
+
+  /* Reduz o espaçamento lateral */
+  .menu {
+    padding: 0 24px;
+  }
+
+  /* Itens do menu ficam menores para caber na tela */
+  .menu__link {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+}
