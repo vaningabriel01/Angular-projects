@@ -1,0 +1,147 @@
+/* ===================================================
+   Petro Energy — footer.component.css
+   =================================================== */
+
+.pe-footer {
+  background-color: #111827;
+  color: #d1d5db;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  padding: 48px 64px 0;
+}
+
+/* --- Grid superior: brand | contato --- */
+.pe-footer__top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #1f2a3c;
+}
+
+/* --- Logo só com texto --- */
+.pe-logo {
+  margin-bottom: 16px;
+}
+
+.pe-logo__name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f9fafb;
+  letter-spacing: -0.02em;
+}
+
+.pe-logo__highlight {
+  color: #f59e0b;
+}
+
+.pe-footer__tagline {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.7;
+  max-width: 340px;
+  margin: 0;
+}
+
+/* --- Bloco de contato --- */
+.pe-footer__section-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f59e0b;
+  margin: 0 0 20px;
+}
+
+.pe-contact__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pe-contact__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.pe-contact__label {
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.pe-contact__text {
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+.pe-contact__link {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pe-contact__link:hover {
+  color: #f59e0b;
+}
+
+/* --- Barra inferior --- */
+.pe-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pe-footer__copyright {
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.pe-footer__links {
+  display: flex;
+  align-items: center;
+}
+
+.pe-footer__link {
+  font-size: 12px;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pe-footer__link:hover {
+  color: #f59e0b;
+}
+
+.pe-footer__divider {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #4b5563;
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  .pe-footer {
+    padding: 40px 24px 0;
+  }
+
+  .pe-footer__top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .pe-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
