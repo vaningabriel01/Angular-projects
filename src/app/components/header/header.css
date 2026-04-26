@@ -1,0 +1,41 @@
+/* Container principal do cabeçalho — ocupa toda a largura da tela */
+.cabecalho {
+  background-color: #111827;
+  padding: 20px 64px;
+  border-bottom: 1px solid #1f2a3c; /* linha separadora sutil entre header e conteúdo */
+}
+
+/* Área que envolve o logo */
+.cabecalho__logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Texto do nome da empresa */
+.logo__nome {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f9fafb;
+  letter-spacing: -0.02em; /* letras levemente mais juntas para parecer profissional */
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  text-decoration: none; /* caso seja usado dentro de um link */
+}
+
+/* Parte do nome colorida em dourado */
+.logo__destaque {
+  color: #f59e0b;
+}
+
+/* --- Responsividade: ajustes para telas menores que 768px (celular) --- */
+@media (max-width: 768px) {
+
+  /* Reduz o espaçamento interno nas laterais */
+  .cabecalho {
+    padding: 16px 24px;
+  }
+
+  /* Logo um pouco menor no celular */
+  .logo__nome {
+    font-size: 18px;
+  }
+}
