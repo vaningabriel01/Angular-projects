@@ -1,0 +1,257 @@
+/* Container geral da página */
+.pagina-sobre {
+  width: 100%;
+  background-color: #0f172a; /* garante fundo escuro em toda a página */
+}
+
+/* Palavra em dourado usada no título */
+.destaque {
+  color: #f59e0b;
+}
+
+/* Título padrão de cada seção da página */
+.secao-titulo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 28px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  border-left: 4px solid #f59e0b; /* barra dourada à esquerda do título */
+  padding-left: 12px;
+}
+
+/* --- Faixa de topo da página --- */
+
+/* Área de destaque no início da página */
+.sobre-topo {
+  background-color: #1a2540;
+  padding: 64px;
+  border-bottom: 2px solid #f59e0b;
+  text-align: center;
+}
+
+/* Título principal */
+.sobre-topo__titulo {
+  font-size: 34px;
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 14px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Frase de apoio abaixo do título */
+.sobre-topo__subtitulo {
+  font-size: 15px;
+  color: #9ca3af;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* --- Seção de história --- */
+
+/* Área de texto da história */
+.historia {
+  background-color: #0f172a; /* fundo escuro igual ao body */
+  padding: 56px 64px;
+  border-bottom: 1px solid #1f2a3c;
+}
+
+/* Parágrafo do texto de história */
+.historia__texto {
+  font-size: 15px;
+  color: #9ca3af;
+  line-height: 1.8;
+  max-width: 780px;
+  margin-bottom: 16px;
+}
+
+/* --- Seção de números em destaque --- */
+
+/* Faixa escura com os números da empresa */
+.numeros {
+  background-color: #1a2540;
+  padding: 48px 64px;
+  border-bottom: 1px solid #1f2a3c;
+}
+
+/* Grade com 4 números lado a lado */
+.numeros__grade {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Caixa de cada número */
+.numero-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+  border: 1px solid #1f2a3c;
+  border-radius: 8px;
+  background-color: #111827;
+}
+
+/* Número grande em destaque */
+.numero-card__valor {
+  font-size: 36px;
+  font-weight: 700;
+  color: #f59e0b;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  margin-bottom: 8px;
+}
+
+/* Descrição abaixo do número */
+.numero-card__rotulo {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* --- Seção de Missão, Visão e Valores --- */
+
+/* Área da seção MVV */
+.mvv {
+  background-color: #0f172a; /* fundo escuro igual ao body */
+  padding: 56px 64px;
+  border-bottom: 1px solid #1f2a3c;
+}
+
+/* Grade com 3 cards lado a lado */
+.mvv__grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Card individual de missão, visão ou valores */
+.mvv-card {
+  background-color: #1e293b;
+  border: 1px solid #1f2a3c;
+  border-radius: 8px;
+  padding: 28px;
+  transition: border-color 0.2s ease;
+}
+
+/* Borda dourada ao passar o mouse */
+.mvv-card:hover {
+  border-color: #f59e0b;
+}
+
+/* Letra inicial em destaque no topo do card */
+.mvv-card__icone {
+  width: 40px;
+  height: 40px;
+  background-color: #f59e0b;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Título do card (Missão / Visão / Valores) */
+.mvv-card__titulo {
+  font-size: 17px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 12px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Texto descritivo do card */
+.mvv-card__texto {
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.7;
+}
+
+/* Lista de valores dentro do card */
+.mvv-card__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Cada item da lista de valores com traço dourado à esquerda */
+.mvv-card__item {
+  font-size: 13px;
+  color: #9ca3af;
+  padding-left: 14px;
+  border-left: 2px solid #f59e0b;
+}
+
+/* --- Seção de áreas de atuação --- */
+
+/* Área da seção */
+.atuacao {
+  background-color: #0f172a; /* fundo escuro igual ao body */
+  padding: 56px 64px;
+}
+
+/* Grade com 3 cards lado a lado */
+.atuacao__grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Card de cada área de atuação */
+.atuacao-card {
+  background-color: #1e293b;
+  border: 1px solid #1f2a3c;
+  border-radius: 8px;
+  padding: 24px;
+  border-top: 3px solid #f59e0b; /* destaque dourado no topo do card */
+}
+
+/* Título da área de atuação */
+.atuacao-card__titulo {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Texto descritivo da área */
+.atuacao-card__texto {
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.7;
+}
+
+/* --- Responsividade: ajustes para celular --- */
+@media (max-width: 768px) {
+
+  .sobre-topo,
+  .historia,
+  .numeros,
+  .mvv,
+  .atuacao {
+    padding: 40px 24px;
+  }
+
+  .sobre-topo__titulo {
+    font-size: 26px;
+  }
+
+  /* Empilha os números em 2 colunas no celular */
+  .numeros__grade {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Empilha os cards em coluna única no celular */
+  .mvv__grade,
+  .atuacao__grade {
+    grid-template-columns: 1fr;
+  }
+}

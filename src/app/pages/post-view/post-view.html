@@ -1,1 +1,48 @@
-<p>post-view works!</p>
+<div class="pagina-post">
+
+  <!-- Caso o post não seja encontrado -->
+  @if (!post) {
+    <div class="post-nao-encontrado">
+      <p class="post-nao-encontrado__texto">Post não encontrado.</p>
+      <a routerLink="/" class="post-nao-encontrado__link">← Voltar para o início</a>
+    </div>
+  }
+
+  <!-- Conteúdo do post -->
+  @if (post) {
+    <!-- Imagem de capa -->
+    <div class="post-capa">
+      <img [src]="post.imagem" [alt]="post.titulo" class="post-capa__imagem">
+      <!-- Camada escura sobre a imagem para o texto ficar legível -->
+      <div class="post-capa__sobreposicao">
+        <div class="post-capa__conteudo">
+          <span class="post-capa__data">{{ post.data }}</span>
+          <h1 class="post-capa__titulo">{{ post.titulo }}</h1>
+          <span class="post-capa__autor">Por {{ post.autor }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Corpo do artigo -->
+    <article class="post-artigo">
+
+      <!-- Resumo destacado -->
+      <p class="post-artigo__resumo">{{ post.resumo }}</p>
+
+      <!-- Linha separadora -->
+      <hr class="post-artigo__separador">
+
+      <!-- Parágrafos do conteúdo completo -->
+      @for (paragrafo of post.conteudo; track $index) {
+        <p class="post-artigo__paragrafo">{{ paragrafo }}</p>
+      }
+
+    </article>
+
+    <!-- Rodapé do post com link de voltar -->
+    <div class="post-rodape">
+      <a routerLink="/" class="post-rodape__link">← Voltar para o início</a>
+    </div>
+  }
+
+</div>

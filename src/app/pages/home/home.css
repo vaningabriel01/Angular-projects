@@ -1,10 +1,7 @@
-/* ===================================================
-   Petro Energy — home.css
-   =================================================== */
-
 /* Container geral da página home */
 .pagina-home {
   width: 100%;
+  background-color: #0f172a; /* garante fundo escuro em toda a página */
 }
 
 /* --- Seção de boas vindas --- */
@@ -44,6 +41,7 @@
 
 /* Área que envolve os cards de post */
 .feed {
+  background-color: #0f172a; /* fundo escuro igual ao body */
   padding: 56px 64px;
 }
 

@@ -1,0 +1,175 @@
+/* Container geral da página */
+.pagina-post {
+  width: 100%;
+}
+
+/* --- Mensagem de post não encontrado --- */
+
+/* Caixa centralizada exibida quando o id não existe */
+.post-nao-encontrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  gap: 20px;
+}
+
+/* Texto de aviso */
+.post-nao-encontrado__texto {
+  font-size: 18px;
+  color: #000000;
+}
+
+/* Link para voltar à home */
+.post-nao-encontrado__link {
+  font-size: 14px;
+  color: #f59e0b;
+  text-decoration: none;
+}
+
+/* --- Imagem de capa --- */
+
+/* Container da imagem com altura fixa */
+.post-capa {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden; /* impede que a imagem ultrapasse os limites */
+}
+
+/* A imagem em si — cobre toda a área */
+.post-capa__imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* recorta sem distorcer */
+  object-position: center;
+  display: block;
+}
+
+/* Camada escura com gradiente sobre a imagem para o texto ser legível */
+.post-capa__sobreposicao {
+  position: absolute;
+  inset: 0; /* ocupa todo o espaço do container pai */
+  background: linear-gradient(to top, rgba(10, 15, 30, 0.92), rgba(10, 15, 30, 0.3));
+  display: flex;
+  align-items: flex-end; /* título fica na parte de baixo da imagem */
+}
+
+/* Área de texto dentro da sobreposição */
+.post-capa__conteudo {
+  padding: 40px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Data do post em dourado */
+.post-capa__data {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f59e0b;
+}
+
+/* Título principal do post sobre a imagem */
+.post-capa__titulo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #f9fafb;
+  line-height: 1.3;
+  max-width: 760px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Autor do post */
+.post-capa__autor {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* --- Corpo do artigo --- */
+
+/* Container do texto do artigo centralizado e com largura limitada */
+.post-artigo {
+  max-width: 820px;
+  margin: 0 auto;          /* centraliza o bloco de texto */
+  padding: 48px 24px;
+}
+
+/* Trecho de resumo em destaque no início do artigo */
+.post-artigo__resumo {
+  font-size: 17px;
+  color: #000000;
+  line-height: 1.8;
+  font-style: italic;
+  border-left: 4px solid #f59e0b; /* barra dourada à esquerda */
+  padding-left: 20px;
+  margin-bottom: 32px;
+}
+
+/* Linha horizontal separando o resumo do conteúdo */
+.post-artigo__separador {
+  border: none;
+  border-top: 1px solid #1f2a3c;
+  margin-bottom: 32px;
+}
+
+/* Cada parágrafo do conteúdo completo */
+.post-artigo__paragrafo {
+  font-size: 15px;
+  color: #000000;
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+
+/* --- Rodapé do post com botão de voltar --- */
+
+/* Faixa inferior com link de navegação */
+.post-rodape {
+  border-top: 1px solid #1f2a3c;
+  padding: 28px 64px;
+}
+
+/* Link de voltar ao início */
+.post-rodape__link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f59e0b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Cor ao passar o mouse */
+.post-rodape__link:hover {
+  color: #fbbf24;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+
+  /* Reduz altura da imagem de capa */
+  .post-capa {
+    height: 280px;
+  }
+
+  /* Reduz padding do texto sobre a imagem */
+  .post-capa__conteudo {
+    padding: 24px;
+  }
+
+  /* Título menor no celular */
+  .post-capa__titulo {
+    font-size: 22px;
+  }
+
+  /* Padding lateral menor no celular */
+  .post-artigo {
+    padding: 32px 24px;
+  }
+
+  .post-rodape {
+    padding: 24px;
+  }
+}
