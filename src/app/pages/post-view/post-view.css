@@ -1,6 +1,11 @@
+/* ===================================================
+   Petro Energy — post-view.css
+   =================================================== */
+
 /* Container geral da página */
 .pagina-post {
   width: 100%;
+  background-color: #0f172a; /* fundo escuro igual ao restante da aplicação */
 }
 
 /* --- Mensagem de post não encontrado --- */
@@ -18,7 +23,7 @@
 /* Texto de aviso */
 .post-nao-encontrado__texto {
   font-size: 18px;
-  color: #000000;
+  color: #9ca3af;
 }
 
 /* Link para voltar à home */
@@ -93,15 +98,16 @@
 
 /* Container do texto do artigo centralizado e com largura limitada */
 .post-artigo {
+  background-color: #0f172a; /* fundo escuro */
   max-width: 820px;
-  margin: 0 auto;          /* centraliza o bloco de texto */
+  margin: 0 auto;
   padding: 48px 24px;
 }
 
 /* Trecho de resumo em destaque no início do artigo */
 .post-artigo__resumo {
   font-size: 17px;
-  color: #000000;
+  color: #d1d5db;
   line-height: 1.8;
   font-style: italic;
   border-left: 4px solid #f59e0b; /* barra dourada à esquerda */
@@ -119,7 +125,7 @@
 /* Cada parágrafo do conteúdo completo */
 .post-artigo__paragrafo {
   font-size: 15px;
-  color: #000000;
+  color: #9ca3af;
   line-height: 1.9;
   margin-bottom: 24px;
 }
@@ -128,6 +134,7 @@
 
 /* Faixa inferior com link de navegação */
 .post-rodape {
+  background-color: #0f172a; /* fundo escuro */
   border-top: 1px solid #1f2a3c;
   padding: 28px 64px;
 }

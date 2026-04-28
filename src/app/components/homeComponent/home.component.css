@@ -1,0 +1,170 @@
+/* ===================================================
+   Petro Energy — components/home/home.css
+   Componente de banner/hero da página inicial
+   =================================================== */
+
+/* Container principal do banner */
+.hero {
+  background-color: #1a2540;
+  border-bottom: 2px solid #f59e0b; /* linha dourada separando do feed */
+  padding: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* texto à esquerda, números à direita */
+  gap: 48px;
+}
+
+/* --- Lado esquerdo: texto --- */
+
+/* Área do conteúdo textual */
+.hero__conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 580px;
+}
+
+/* Pequena etiqueta acima do título */
+.hero__tag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f59e0b;
+}
+
+/* Título principal do banner */
+.hero__titulo {
+  font-size: 36px;
+  font-weight: 700;
+  color: #f9fafb;
+  line-height: 1.25;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Palavra em dourado dentro do título */
+.hero__destaque {
+  color: #f59e0b;
+}
+
+/* Texto descritivo abaixo do título */
+.hero__texto {
+  font-size: 15px;
+  color: #9ca3af;
+  line-height: 1.7;
+}
+
+/* Área com os botões de ação */
+.hero__acoes {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Estilo base dos botões */
+.hero__botao {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Botão principal — fundo dourado */
+.hero__botao--primario {
+  background-color: #f59e0b;
+  color: #111827;
+}
+
+/* Botão principal ao passar o mouse */
+.hero__botao--primario:hover {
+  background-color: #fbbf24;
+}
+
+/* Botão secundário — apenas borda */
+.hero__botao--secundario {
+  background-color: transparent;
+  color: #f9fafb;
+  border: 1px solid #374151;
+}
+
+/* Botão secundário ao passar o mouse */
+.hero__botao--secundario:hover {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+/* --- Lado direito: números rápidos --- */
+
+/* Painel lateral com os números */
+.hero__numeros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background-color: #111827;
+  border: 1px solid #1f2a3c;
+  border-radius: 12px;
+  padding: 36px 48px;
+  flex-shrink: 0; /* impede que o painel encolha */
+}
+
+/* Cada linha de número */
+.hero__numero-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+/* Número grande em dourado */
+.hero__numero-valor {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f59e0b;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Descrição do número */
+.hero__numero-rotulo {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Linha horizontal separando os números */
+.hero__separador {
+  width: 40px;
+  height: 1px;
+  background-color: #1f2a3c;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+
+  /* Empilha texto e números verticalmente no celular */
+  .hero {
+    flex-direction: column;
+    padding: 40px 24px;
+  }
+
+  /* Título menor no celular */
+  .hero__titulo {
+    font-size: 26px;
+  }
+
+  /* Números ficam em linha no celular */
+  .hero__numeros {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding: 24px;
+  }
+
+  /* Esconde os separadores no celular */
+  .hero__separador {
+    display: none;
+  }
+}

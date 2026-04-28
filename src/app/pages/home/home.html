@@ -1,41 +1,35 @@
 <div class="pagina-home">
 
-  <!-- Seção de boas vindas -->
-  <section class="boas-vindas">
-    <h1 class="boas-vindas__titulo">Bem-vindo à Petro<span class="destaque">Energy</span></h1>
-    <p class="boas-vindas__subtitulo">
-      Liderando o futuro da energia com responsabilidade, inovação e compromisso ambiental.
-    </p>
-  </section>
+  <!-- Componente hero banner -->
+  <app-home-banner></app-home-banner>
 
-  <!-- Seção do feed de posts -->
+  <!-- Feed de posts -->
   <section class="feed">
 
     <h2 class="feed__titulo">Últimos Projetos</h2>
     <p class="feed__descricao">Acompanhe os projetos de exploração de combustíveis fósseis da nossa empresa.</p>
 
-    <!-- Grade com os 3 últimos posts -->
     <div class="feed__grade">
+      @for (post of posts; track post.id) {
+        <article class="post-card">
 
-      <article class="post-card" *ngFor="let post of posts">
+          <img [src]="post.imagem" [alt]="post.titulo" class="post-card__imagem">
 
-        <!-- Tag img simples — Angular não bloqueia src externo -->
-        <img [src]="post.imagem" [alt]="post.titulo" class="post-card__imagem">
+          <div class="post-card__conteudo">
+            <span class="post-card__data">{{ post.data }}</span>
+            <h3 class="post-card__titulo">{{ post.titulo }}</h3>
+            <p class="post-card__resumo">{{ post.resumo }}</p>
+          </div>
 
-        <div class="post-card__conteudo">
-          <span class="post-card__data">{{ post.data }}</span>
-          <h3 class="post-card__titulo">{{ post.titulo }}</h3>
-          <p class="post-card__resumo">{{ post.resumo }}</p>
-        </div>
+          <div class="post-card__rodape">
+            <!-- ao clicar navega para /post/1, /post/2 ou /post/3 -->
+            <a [routerLink]="['/post', post.id]" class="post-card__link">
+              Ler post completo →
+            </a>
+          </div>
 
-        <div class="post-card__rodape">
-          <a [routerLink]="['/post', post.id]" class="post-card__link">
-            Ler post completo →
-          </a>
-        </div>
-
-      </article>
-
+        </article>
+      }
     </div>
 
   </section>

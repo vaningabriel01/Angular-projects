@@ -1,1 +1,67 @@
-<p>projetos works!</p>
+<div class="pagina-projetos">
+
+  <!-- Topo da página -->
+  <section class="projetos-topo">
+    <h1 class="projetos-topo__titulo">Projetos <span class="destaque">Sociais</span></h1>
+    <p class="projetos-topo__subtitulo">
+      Conheça as iniciativas da PetroEnergy que transformam comunidades
+      e promovem um futuro mais justo e sustentável.
+    </p>
+  </section>
+
+  <!-- Grade de cards -->
+  <section class="projetos-lista">
+
+    <div class="projetos-grade">
+      @for (projeto of projetos; track projeto.id) {
+        <article class="projeto-card" (click)="abrirModal(projeto)">
+
+          <img [src]="projeto.imagem" [alt]="projeto.titulo" class="projeto-card__imagem">
+
+          <div class="projeto-card__conteudo">
+            <span class="projeto-card__categoria">{{ projeto.categoria }}</span>
+            <h3 class="projeto-card__titulo">{{ projeto.titulo }}</h3>
+            <p class="projeto-card__descricao">{{ projeto.descricao }}</p>
+          </div>
+
+          <div class="projeto-card__rodape">
+            <span class="projeto-card__link">Ver mais →</span>
+          </div>
+
+        </article>
+      }
+    </div>
+
+  </section>
+
+  <!-- Modal de detalhes do projeto -->
+  @if (projetoSelecionado) {
+    <div class="modal-fundo" (click)="fecharModal()">
+
+      <!-- Impede que clicar dentro do modal feche ele -->
+      <div class="modal" (click)="$event.stopPropagation()">
+
+        <button class="modal__fechar" (click)="fecharModal()">✕</button>
+
+        <img [src]="projetoSelecionado.imagem" [alt]="projetoSelecionado.titulo" class="modal__imagem">
+
+        <div class="modal__conteudo">
+          <span class="modal__categoria">{{ projetoSelecionado.categoria }}</span>
+          <h2 class="modal__titulo">{{ projetoSelecionado.titulo }}</h2>
+          <p class="modal__descricao">{{ projetoSelecionado.descricao }}</p>
+          <hr class="modal__separador">
+          @for (paragrafo of projetoSelecionado.detalhes; track $index) {
+            <p class="modal__paragrafo">{{ paragrafo }}</p>
+          }
+          <div class="modal__info">
+            <span class="modal__info-item">📍 {{ projetoSelecionado.local }}</span>
+            <span class="modal__info-item">👥 {{ projetoSelecionado.beneficiados }} beneficiados</span>
+            <span class="modal__info-item">📅 Desde {{ projetoSelecionado.ano }}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  }
+
+</div>

@@ -1,21 +1,20 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NgFor } from '@angular/common';
+import { HomeBanner } from '../../components/homeComponent/home.component'; // componente hero banner
 
-// Estrutura de dados de um post
 interface Post {
   id: number;
   titulo: string;
   resumo: string;
   data: string;
-  imagem: string; // URL simples como string normal
+  imagem: string;
 }
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.html',
   styleUrls: ['./home.css'],
-  imports: [RouterLink, NgFor]
+  imports: [RouterLink, HomeBanner] // HomeBanner registrado aqui para aparecer no HTML
 })
 export class Home {
 
