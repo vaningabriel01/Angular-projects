@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { HomeBanner } from '../../components/homeComponent/home.component'; // componente hero banner
-
+import { PostCard } from '../../components/post-card/post-card';
 interface Post {
   id: number;
   titulo: string;
@@ -14,7 +14,7 @@ interface Post {
   selector: 'app-home',
   templateUrl: './home.html',
   styleUrls: ['./home.css'],
-  imports: [RouterLink, HomeBanner] // HomeBanner registrado aqui para aparecer no HTML
+  imports: [ HomeBanner, PostCard] // HomeBanner e PostCard registrados aqui para aparecer no HTML
 })
 export class Home {
 

@@ -1,1 +1,19 @@
-<p>post-card works!</p>
+<!-- Card individual de post — recebe os dados via @Input() -->
+<article class="post-card" >
+
+  <img [src]="post.imagem" [alt]="post.titulo" class="post-card__imagem">
+
+  <div class="post-card__conteudo">
+    <span class="post-card__data">{{ post.data }}</span>
+    <h3 class="post-card__titulo">{{ post.titulo }}</h3>
+    <p class="post-card__resumo">{{ post.resumo }}</p>
+  </div>
+
+  <div class="post-card__rodape">
+    <!-- navega para a página do post completo -->
+    <a [routerLink]="['/post', post.id]" class="post-card__link">
+      Ler post completo →
+    </a>
+  </div>
+
+</article>

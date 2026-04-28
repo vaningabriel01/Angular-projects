@@ -11,24 +11,9 @@
 
     <div class="feed__grade">
       @for (post of posts; track post.id) {
-        <article class="post-card">
 
-          <img [src]="post.imagem" [alt]="post.titulo" class="post-card__imagem">
+         <app-post-card [post]="post"></app-post-card> <!-- Componente de card de post, recebe os dados do post via @Input() -->
 
-          <div class="post-card__conteudo">
-            <span class="post-card__data">{{ post.data }}</span>
-            <h3 class="post-card__titulo">{{ post.titulo }}</h3>
-            <p class="post-card__resumo">{{ post.resumo }}</p>
-          </div>
-
-          <div class="post-card__rodape">
-            <!-- ao clicar navega para /post/1, /post/2 ou /post/3 -->
-            <a [routerLink]="['/post', post.id]" class="post-card__link">
-              Ler post completo →
-            </a>
-          </div>
-
-        </article>
       }
     </div>
 
