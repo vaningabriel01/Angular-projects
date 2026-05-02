@@ -1,81 +1,69 @@
-/* ===================================================
-   Petro Energy — post-card.component.css
-   =================================================== */
+/* post-card.css */
 
-/* Caixa do card com borda e fundo escuro */
 .post-card {
-  background-color: #1e293b;
-  border: 1px solid #1f2a3c;
+  background-color: #1a1a2e;
+  border: 1px solid #1a1a2e;
   border-radius: 8px;
   display: flex;
-  flex-direction: column; /* empilha imagem, conteúdo e rodapé verticalmente */
-  justify-content: space-between; /* empurra o link para o fundo do card */
+  flex-direction: column;
+  justify-content: space-between;
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-/* Leve elevação e borda dourada ao passar o mouse */
 .post-card:hover {
-  border-color: #f59e0b;
+  border-color: #e8a020;
   transform: translateY(-4px);
 }
 
-/* Imagem no topo do card */
 .post-card__imagem {
   width: 100%;
   height: 160px;
-  object-fit: cover;       /* recorta sem distorcer */
-  border-radius: 8px 8px 0 0; /* arredonda só os cantos superiores */
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
   display: block;
 }
 
-/* Área de texto do card */
 .post-card__conteudo {
   padding: 20px 20px 12px;
 }
 
-/* Data em dourado */
 .post-card__data {
   font-size: 11px;
-  color: #f59e0b;
+  color: #e8a020;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  display: block; /* ocupa linha própria */
+  display: block;
   margin-bottom: 10px;
 }
 
-/* Título do post */
 .post-card__titulo {
   font-size: 16px;
   font-weight: 600;
   color: #f1f5f9;
-  margin-bottom: 10px;
   line-height: 1.4;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  margin-bottom: 10px;
+  font-family: system-ui, sans-serif;
 }
 
-/* Resumo do post */
 .post-card__resumo {
   font-size: 13px;
   color: #9ca3af;
   line-height: 1.7;
 }
 
-/* Rodapé do card com o link */
 .post-card__rodape {
   padding: 14px 20px 20px;
-  border-top: 1px solid #1f2a3c; /* linha separando o link do conteúdo */
+  border-top: 1px solid #2d2d4e;
 }
 
-/* Link de ler o post completo */
 .post-card__link {
   font-size: 13px;
   font-weight: 600;
-  color: #f59e0b;
+  color: #e8a020;
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
 .post-card__link:hover {
-  color: #fbbf24;
+  color: #f0b040;
 }

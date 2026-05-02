@@ -1,52 +1,41 @@
-/* ===================================================
-   NÃO use estas classes dentro dos componentes,
-   cada componente tem seu próprio arquivo .css
-   =================================================== */
+/* app.css */
 
-
-/* --- Reset básico: remove margens e paddings padrão do navegador --- */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* faz com que padding não aumente o tamanho dos elementos */
+  box-sizing: border-box;
 }
 
-/* --- Estilo base da página --- */
 body {
-  background-color: #0f172a; /* fundo escuro geral da aplicação */
-  color: #d1d5db;            /* cor de texto padrão */
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: #0f172a;
+  color: #d1d5db;
+  font-family: system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.6;
 }
 
-/* --- Remove o sublinhado de todos os links da aplicação --- */
 a {
   text-decoration: none;
-  color: inherit; /* herda a cor do elemento pai */
+  color: inherit;
 }
 
-/* --- Remove o estilo padrão de todas as listas --- */
 ul, ol {
   list-style: none;
 }
 
-/* --- Faz imagens não ultrapassarem o tamanho do container --- */
 img {
   max-width: 100%;
   display: block;
 }
 
-/* --- Container central: limita a largura do conteúdo e centraliza --- */
 .container {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;       /* centraliza horizontalmente */
-  padding: 0 24px;      /* espaçamento lateral */
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-/* --- Área de conteúdo principal entre o navbar e o rodapé --- */
 .conteudo-principal {
-  min-height: calc(100vh - 130px); /* ocupa o espaço disponível sem empurrar o rodapé */
+  min-height: calc(100vh - 130px);
   padding: 40px 0;
 }

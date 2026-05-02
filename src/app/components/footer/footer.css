@@ -1,160 +1,131 @@
-/* Container principal do rodapé */
+/* footer.css */
+
 .rodape {
-  background-color: #111827;
-  color: #d1d5db;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: #1a1a2e;
+  color: #9ca3af;
+  font-family: system-ui, sans-serif;
   padding: 48px 64px 0;
 }
 
-/* Grade que divide o rodapé em duas colunas: marca à esquerda, contato à direita */
 .rodape__topo {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 48px;
   padding-bottom: 40px;
-  border-bottom: 1px solid #1f2a3c; /* linha separadora sutil */
+  border-bottom: 1px solid #2d2d4e;
 }
 
-/* Espaço abaixo do logo antes da tagline */
 .logo {
   margin-bottom: 16px;
 }
 
-/* Texto do nome da empresa em destaque */
 .logo__nome {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
-  color: #f9fafb;
-  letter-spacing: -0.02em; /* letras levemente mais juntas para parecer profissional */
+  color: #fff;
 }
 
-/* Parte do nome da empresa colorida em dourado */
 .logo__destaque {
-  color: #f59e0b;
+  color: #e8a020;
 }
 
-/* Frase curta de descrição da empresa abaixo do logo */
 .rodape__descricao {
   font-size: 13px;
   color: #6b7280;
-  line-height: 1.7; /* espaçamento entre linhas para facilitar a leitura */
+  line-height: 1.7;
   max-width: 340px;
   margin: 0;
 }
 
-/* Título da seção de contato em letras maiúsculas pequenas */
 .contato__titulo {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.1em; /* letras mais espaçadas para estilo de título */
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #f59e0b;
+  color: #e8a020;
   margin: 0 0 20px;
 }
 
-/* Lista de itens de contato sem marcadores */
 .contato__lista {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column; /* itens empilhados verticalmente */
-  gap: 14px; /* espaço entre cada item */
+  flex-direction: column;
+  gap: 12px;
 }
 
-/* Cada linha de contato (endereço, e-mail, telefone) */
 .contato__item {
   display: flex;
-  align-items: flex-start;
   gap: 8px;
   font-size: 13px;
 }
 
-/* Palavra à esquerda indicando o tipo de contato (ex: "E-mail:") */
 .contato__rotulo {
   color: #6b7280;
-  flex-shrink: 0; /* impede que o rótulo encolha */
+  flex-shrink: 0;
 }
 
-/* Texto do contato (endereço por extenso) */
-.contato__texto {
+.contato__texto,
+.contato__link {
   color: #9ca3af;
+  text-decoration: none;
   line-height: 1.6;
 }
 
-/* Links clicáveis de contato (e-mail e telefone) */
-.contato__link {
-  color: #9ca3af;
-  text-decoration: none; /* remove o sublinhado padrão dos links */
-  transition: color 0.2s ease; /* animação suave ao passar o mouse */
-}
-
-/* Cor do link ao passar o mouse por cima */
 .contato__link:hover {
-  color: #f59e0b;
+  color: #e8a020;
 }
 
-/* Barra inferior com copyright e links legais */
 .rodape__base {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* copyright à esquerda, links à direita */
+  justify-content: space-between;
   padding: 20px 0;
-  flex-wrap: wrap; /* quebra linha em telas pequenas */
+  flex-wrap: wrap;
   gap: 12px;
 }
 
-/* Texto de direitos autorais */
 .rodape__copyright {
   font-size: 12px;
   color: #4b5563;
 }
 
-/* Agrupa os links legais lado a lado */
 .rodape__links-legais {
   display: flex;
   align-items: center;
 }
 
-/* Links de política e termos de uso */
 .rodape__link {
   font-size: 12px;
   color: #4b5563;
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
-/* Cor do link legal ao passar o mouse */
 .rodape__link:hover {
-  color: #f59e0b;
+  color: #e8a020;
 }
 
-/* Ponto separador entre os links legais */
 .rodape__separador {
   width: 3px;
   height: 3px;
-  border-radius: 50%; /* deixa o elemento redondo */
+  border-radius: 50%;
   background-color: #4b5563;
   display: inline-block;
   margin: 0 10px;
-  vertical-align: middle; /* alinha verticalmente com o texto */
+  vertical-align: middle;
 }
 
-/* --- Responsividade: ajustes para telas menores que 768px (celular) --- */
 @media (max-width: 768px) {
-
-  /* Reduz o espaçamento interno nas laterais */
   .rodape {
     padding: 40px 24px 0;
   }
 
-  /* Muda para coluna única (uma embaixo da outra) */
   .rodape__topo {
     grid-template-columns: 1fr;
     gap: 32px;
   }
 
-  /* Empilha copyright e links verticalmente */
   .rodape__base {
     flex-direction: column;
     align-items: flex-start;

@@ -1,20 +1,19 @@
-/* Container geral da página */
+/* projetos.css */
+
 .pagina-projetos {
   width: 100%;
   background-color: #0f172a;
 }
 
-/* Palavra em dourado */
 .destaque {
-  color: #f59e0b;
+  color: #e8a020;
 }
 
-/* --- Topo da página --- */
-
+/* Topo */
 .projetos-topo {
-  background-color: #1a2540;
+  background-color: #1a1a2e;
   padding: 64px;
-  border-bottom: 2px solid #f59e0b;
+  border-bottom: 2px solid #e8a020;
   text-align: center;
 }
 
@@ -23,7 +22,7 @@
   font-weight: 700;
   color: #f9fafb;
   margin-bottom: 14px;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
 .projetos-topo__subtitulo {
@@ -34,41 +33,34 @@
   line-height: 1.7;
 }
 
-/* --- Grade de projetos --- */
-
+/* Lista */
 .projetos-lista {
   padding: 56px 64px;
-  background-color: #0f172a;
 }
 
-/* Grade com 3 colunas */
 .projetos-grade {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-/* --- Card de projeto --- */
-
-/* Caixa do card — cursor pointer indica que é clicável */
+/* Card */
 .projeto-card {
   background-color: #1e293b;
-  border: 1px solid #1f2a3c;
+  border: 1px solid #2d2d4e;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: pointer; /* indica que o card é clicável */
+  cursor: pointer;
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-/* Leve elevação ao passar o mouse */
 .projeto-card:hover {
-  border-color: #f59e0b;
+  border-color: #e8a020;
   transform: translateY(-4px);
 }
 
-/* Imagem do card */
 .projeto-card__imagem {
   width: 100%;
   height: 180px;
@@ -77,79 +69,69 @@
   display: block;
 }
 
-/* Área de texto do card */
 .projeto-card__conteudo {
   padding: 20px 20px 12px;
 }
 
-/* Tag de categoria */
 .projeto-card__categoria {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #f59e0b;
+  color: #e8a020;
   display: block;
   margin-bottom: 8px;
 }
 
-/* Título do projeto */
 .projeto-card__titulo {
   font-size: 16px;
   font-weight: 600;
   color: #f1f5f9;
-  margin-bottom: 10px;
   line-height: 1.4;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  margin-bottom: 10px;
+  font-family: system-ui, sans-serif;
 }
 
-/* Descrição curta */
 .projeto-card__descricao {
   font-size: 13px;
   color: #9ca3af;
   line-height: 1.6;
 }
 
-/* Rodapé do card */
 .projeto-card__rodape {
   padding: 14px 20px 20px;
-  border-top: 1px solid #1f2a3c;
+  border-top: 1px solid #2d2d4e;
 }
 
-/* Texto "Ver mais" */
 .projeto-card__link {
   font-size: 13px;
   font-weight: 600;
-  color: #f59e0b;
+  color: #e8a020;
 }
 
-/* --- Modal --- */
-
-/* Camada escura de fundo que cobre a tela toda */
+/* Modal */
 .modal-fundo {
-  position: fixed;   /* fica por cima de tudo */
-  inset: 0;          /* ocupa a tela inteira */
+  position: fixed;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;     /* garante que fica acima de todos os outros elementos */
+  z-index: 1000;
   padding: 24px;
 }
 
-/* Caixa do modal em si */
 .modal {
   background-color: #1e293b;
-  border: 1px solid #1f2a3c;
-  border-radius: 12px;
+  border: 1px solid #2d2d4e;
+  border-radius: 8px;
   width: 100%;
   max-width: 680px;
-  max-height: 90vh;      /* altura máxima de 90% da tela */
-  overflow-y: auto;      /* scroll interno se o conteúdo for grande */
+  max-height: 90vh;
+  overflow-y: auto;
   position: relative;
 }
 
-/* Botão de fechar o modal */
 .modal__fechar {
   position: absolute;
   top: 16px;
@@ -165,66 +147,58 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s ease;
 }
 
 .modal__fechar:hover {
-  color: #f59e0b;
+  color: #e8a020;
 }
 
-/* Imagem no topo do modal */
 .modal__imagem {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: 12px 12px 0 0;
+  border-radius: 8px 8px 0 0;
   display: block;
 }
 
-/* Área de texto do modal */
 .modal__conteudo {
   padding: 28px;
 }
 
-/* Tag de categoria no modal */
 .modal__categoria {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #f59e0b;
+  color: #e8a020;
   display: block;
   margin-bottom: 10px;
 }
 
-/* Título no modal */
 .modal__titulo {
   font-size: 22px;
   font-weight: 700;
   color: #f9fafb;
   margin-bottom: 12px;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
-/* Descrição curta no modal */
 .modal__descricao {
   font-size: 14px;
   color: #d1d5db;
   line-height: 1.7;
   font-style: italic;
-  border-left: 3px solid #f59e0b;
+  border-left: 3px solid #e8a020;
   padding-left: 14px;
   margin-bottom: 20px;
 }
 
-/* Linha separadora */
 .modal__separador {
   border: none;
-  border-top: 1px solid #1f2a3c;
+  border-top: 1px solid #2d2d4e;
   margin-bottom: 20px;
 }
 
-/* Parágrafos de detalhes */
 .modal__paragrafo {
   font-size: 14px;
   color: #9ca3af;
@@ -232,25 +206,22 @@
   margin-bottom: 16px;
 }
 
-/* Área com informações resumidas (local, beneficiados, ano) */
 .modal__info {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 24px;
   padding-top: 20px;
-  border-top: 1px solid #1f2a3c;
+  border-top: 1px solid #2d2d4e;
 }
 
-/* Cada item de informação */
 .modal__info-item {
   font-size: 13px;
   color: #6b7280;
 }
 
-/* --- Responsividade --- */
+/* Responsividade */
 @media (max-width: 768px) {
-
   .projetos-topo {
     padding: 40px 24px;
   }
@@ -259,19 +230,17 @@
     padding: 40px 24px;
   }
 
-  /* Duas colunas no tablet */
   .projetos-grade {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Uma coluna no celular */
-  @media (max-width: 480px) {
-    .projetos-grade {
-      grid-template-columns: 1fr;
-    }
-  }
-
   .modal-fundo {
     padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projetos-grade {
+    grid-template-columns: 1fr;
   }
 }

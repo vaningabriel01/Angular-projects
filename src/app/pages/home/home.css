@@ -1,167 +1,147 @@
-/* Container geral da página home */
+/* home.css */
+
 .pagina-home {
   width: 100%;
-  background-color: #0f172a; /* garante fundo escuro em toda a página */
+  background-color: #0f172a;
 }
 
-/* --- Seção de boas vindas --- */
-
-/* Faixa de destaque no topo da página */
+/* Boas-vindas */
 .boas-vindas {
-  background-color: #1a2540;
+  background-color: #1a1a2e;
   padding: 64px;
-  border-bottom: 2px solid #f59e0b; /* linha dourada separando do restante */
+  border-bottom: 2px solid #e8a020;
   text-align: center;
 }
 
-/* Título principal da página */
 .boas-vindas__titulo {
   font-size: 36px;
   font-weight: 700;
   color: #f9fafb;
   margin-bottom: 16px;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
-/* Palavra em dourado dentro do título */
 .destaque {
-  color: #f59e0b;
+  color: #e8a020;
 }
 
-/* Frase de apoio abaixo do título */
 .boas-vindas__subtitulo {
   font-size: 16px;
   color: #9ca3af;
   max-width: 560px;
-  margin: 0 auto; /* centraliza o texto */
+  margin: 0 auto;
   line-height: 1.7;
 }
 
-/* --- Seção do feed de posts --- */
-
-/* Área que envolve os cards de post */
+/* Feed */
 .feed {
-  background-color: #0f172a; /* fundo escuro igual ao body */
+  background-color: #0f172a;
   padding: 56px 64px;
 }
 
-/* Título da seção de posts */
 .feed__titulo {
   font-size: 24px;
   font-weight: 700;
   color: #f9fafb;
   margin-bottom: 8px;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
-/* Descrição abaixo do título da seção */
 .feed__descricao {
   font-size: 14px;
   color: #6b7280;
   margin-bottom: 36px;
 }
 
-/* Grade que organiza os 3 cards lado a lado */
 .feed__grade {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-/* --- Card individual de post --- */
-
-/* Caixa do card com borda e fundo escuro */
+/* Post card */
 .post-card {
   background-color: #1e293b;
-  border: 1px solid #1f2a3c;
+  border: 1px solid #2d2d4e;
   border-radius: 8px;
   display: flex;
-  flex-direction: column; /* empilha conteúdo e rodapé verticalmente */
-  justify-content: space-between; /* empurra o link para o fundo do card */
-  transition: border-color 0.2s ease; /* animação suave ao passar o mouse */
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-/* Borda dourada ao passar o mouse no card */
 .post-card:hover {
-  border-color: #f59e0b;
+  border-color: #e8a020;
+  transform: translateY(-4px);
 }
 
-/* Área de texto interna do card */
+.post-card__imagem {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  display: block;
+}
+
 .post-card__conteudo {
   padding: 24px 24px 16px;
 }
 
-/* Data de publicação do post */
 .post-card__data {
   font-size: 11px;
-  color: #f59e0b;
+  color: #e8a020;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  display: block; /* ocupa linha própria */
+  display: block;
   margin-bottom: 10px;
 }
 
-/* Título do post */
 .post-card__titulo {
   font-size: 17px;
   font-weight: 600;
   color: #f1f5f9;
-  margin-bottom: 12px;
   line-height: 1.4;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  margin-bottom: 12px;
+  font-family: system-ui, sans-serif;
 }
 
-/* Resumo do post */
 .post-card__resumo {
   font-size: 13px;
   color: #9ca3af;
   line-height: 1.7;
 }
 
-/* Área inferior do card com o link */
 .post-card__rodape {
   padding: 16px 24px 24px;
-  border-top: 1px solid #1f2a3c; /* linha separando o link do conteúdo */
+  border-top: 1px solid #2d2d4e;
 }
 
-/* Link para a página do post completo */
 .post-card__link {
   font-size: 13px;
   font-weight: 600;
-  color: #f59e0b;
+  color: #e8a020;
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
-/* Cor do link ao passar o mouse */
 .post-card__link:hover {
-  color: #fbbf24;
+  color: #f0b040;
 }
 
-/* --- Responsividade: ajustes para telas menores que 768px (celular) --- */
 @media (max-width: 768px) {
+  .boas-vindas {
+    padding: 40px 24px;
+  }
 
-  /* Título menor no celular */
   .boas-vindas__titulo {
     font-size: 26px;
   }
 
-  /* Uma coluna só no celular — cards empilhados */
+  .feed {
+    padding: 40px 24px;
+  }
+
   .feed__grade {
     grid-template-columns: 1fr;
   }
 }
-
-/* --- Imagem de fundo do card --- */
-
-/* Imagem no topo do card */
-.post-card__imagem {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;       /* recorta a imagem para preencher o espaço sem distorcer */
-  border-radius: 8px 8px 0 0;  /* arredonda só os cantos superiores */
-  display: block;
-}
-
-/* Camada escura sobre a imagem para melhorar a legibilidade */
